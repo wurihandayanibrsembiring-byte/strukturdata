@@ -7,7 +7,7 @@ void menuInput() {
     cout << "Pilih metode (1-3): ";
     cin >> pil;
 
- if (pil == 1) inputManual();
+if (pil == 1) inputManual();
     else if (pil == 2) generateAcak();
     else if (pil == 3) bacaDariFile();
     else cout << "Pilihan salah!\n";
