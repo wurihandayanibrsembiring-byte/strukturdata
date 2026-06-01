@@ -1,0 +1,19 @@
+void bacaDariFile() {
+    string namaFile;
+    cout << "Masukkan nama file (contoh: data.txt): ";
+    cin >> namaFile;
+
+ifstream file(namaFile);
+    if (!file.is_open()) {
+        cout << "[Error] File tidak ditemukan!\n";
+        return;
+    }
+
+dataUtama.clear();
+    int nilai;
+    while (file >> nilai) {
+        dataUtama.push_back(nilai);
+    }
+    file.close();
+    cout << "=> Berhasil membaca " << dataUtama.size() << " data dari file.\n";
+}
